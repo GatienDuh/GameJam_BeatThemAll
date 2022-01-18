@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
         }
         moveDirection.y -= gravity * Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        /*if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             Vector3 temp = transform.rotation.eulerAngles;
             temp.y = 0f;
@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
             Vector3 temp = transform.rotation.eulerAngles;
             temp.y = 180f;
             transform.rotation = Quaternion.Euler(temp);
-        }
+        }*/
     }
 
     private void FixedUpdate()
