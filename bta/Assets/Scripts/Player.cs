@@ -23,6 +23,8 @@ public class Player : MonoBehaviour
         characterController = GetComponent<CharacterController>();
     }
 
+    //#Movement
+
     private void Update()
     {
         if (characterController.isGrounded)
@@ -59,26 +61,13 @@ public class Player : MonoBehaviour
 
     //#Combat System
 
-
-
     /*void Attack()
     {      
         StartCoroutine(AttackAnimation());      
     }*/
 
-    private void OnDrawGizmosSelected()
-    {
-        if (attackPoint == null)
-        {
-            return;
-        }
-           
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-    }
-
     /*IEnumerator AttackAnimation()
     {
-        Debug.Log("Start : " + Time.time);
         isAttacking = true;
         animator.SetTrigger("Attack");
         rb.constraints = RigidbodyConstraints2D.FreezePosition;
@@ -90,14 +79,7 @@ public class Player : MonoBehaviour
         foreach (Collider2D enemy in Enemies)
         {
                 enemy.GetComponent<Animator>().SetTrigger("Hurt");
-                enemy.GetComponent<Dummy>().health -= 1;             
-        }
-
-        Collider2D[] Trees = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, treeLayers);
-
-        foreach (Collider2D tree in Trees)
-        {
-            tree.GetComponent<Tree>().health -= 1;
+                enemy.GetComponent<Enemy>().health -= 1;             
         }
 
         rb.constraints = RigidbodyConstraints2D.None;
@@ -106,7 +88,17 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
 
         isAttacking = false;
-
-        Debug.Log("Finish : " + Time.time);
     }*/
+
+    //#Gizmos Hitbox
+
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+        {
+            return;
+        }
+
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
 }
