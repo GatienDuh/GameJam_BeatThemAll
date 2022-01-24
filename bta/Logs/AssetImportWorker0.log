@@ -389,3 +389,44 @@ Received Import Request.
 Start importing Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Widgets/DebugUI Toggle.prefab using Guid(ce347ad101f41ee4ab5c3fbc0ea447db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0843705a7c84bce2d3a41526a8dc098d') in 0.006327 seconds 
   Import took 0.010431 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 284.273496 seconds.
+  path: Assets/Animation/Animation PP/walk test import 1.fbx
+  artifactKey: Guid(05c381ec8e2636d4a9226b79ca309536) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/Animation PP/walk test import 1.fbx using Guid(05c381ec8e2636d4a9226b79ca309536) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a97da487e42819ac88736f0cf8859d3') in 0.246824 seconds 
+  Import took 0.252282 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 77.302667 seconds.
+  path: Assets/Animation/Animation PP/walk test import 1.fbx
+  artifactKey: Guid(05c381ec8e2636d4a9226b79ca309536) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/Animation PP/walk test import 1.fbx using Guid(05c381ec8e2636d4a9226b79ca309536) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e63ab7e69d96f55169d5264a90ab7ebd') in 0.235034 seconds 
+  Import took 0.240249 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 75.419798 seconds.
+  path: Assets/Animation/pp wlak.controller
+  artifactKey: Guid(10c546820b333ce4fb630a1064dabd5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/pp wlak.controller using Guid(10c546820b333ce4fb630a1064dabd5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d376d95d154f1f5ea87e9f0b5355006') in 0.006562 seconds 
+  Import took 0.011188 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.409404 seconds.
+  path: Assets/Animation/PP Candel.controller
+  artifactKey: Guid(10c546820b333ce4fb630a1064dabd5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/PP Candel.controller using Guid(10c546820b333ce4fb630a1064dabd5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb390fa80e074ddb324b08c0d6e8bbac') in 0.004282 seconds 
+  Import took 0.008853 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.140969 seconds.
+  path: Assets/Animation/Animation PP/Take 001.anim
+  artifactKey: Guid(6fab4ae42399e034684fb4af66704b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/Animation PP/Take 001.anim using Guid(6fab4ae42399e034684fb4af66704b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa339f542890f2a69da0153b377db00c') in 0.008408 seconds 
+  Import took 0.013064 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
