@@ -199,7 +199,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 29951549}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD:bta/Assets/Scenes/Scene Test Gatien.unity
+  m_LocalPosition: {x: 2.71, y: 4.45, z: 2.15}
+=======
   m_LocalPosition: {x: 2.71, y: 4.61, z: 1.58}
+>>>>>>> 59ff5d22cc94474f87bcaf924de308bb82014402:bta/Assets/Scenes/Scene Test Gatien 1.unity
   m_LocalScale: {x: 0.65616, y: 0.65616, z: 0.65616}
   m_Children: []
   m_Father: {fileID: 0}
@@ -881,6 +885,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:bta/Assets/Scenes/Scene Test Gatien.unity
+--- !u!54 &1610219746
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610219745}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 120
+  m_CollisionDetection: 0
+=======
+>>>>>>> 59ff5d22cc94474f87bcaf924de308bb82014402:bta/Assets/Scenes/Scene Test Gatien 1.unity
 --- !u!136 &1610219747
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -959,8 +982,13 @@ MonoBehaviour:
   speed: 6
   jumpSpeed: 10
   gravity: 20
+<<<<<<< HEAD:bta/Assets/Scenes/Scene Test Gatien.unity
+  attackPoint: {fileID: 1466032915}
+  attackRange: 1.34
+=======
   attackRange: 1.34
   attackPoint: {fileID: 1466032915}
+>>>>>>> 59ff5d22cc94474f87bcaf924de308bb82014402:bta/Assets/Scenes/Scene Test Gatien 1.unity
 --- !u!4 &1610219751
 Transform:
   m_ObjectHideFlags: 0
