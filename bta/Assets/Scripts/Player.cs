@@ -53,7 +53,7 @@ public class Player : MonoBehaviour
             transform.rotation = Quaternion.Euler(temp);
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && isAttacking == false)
         {
             Attack();
         }
