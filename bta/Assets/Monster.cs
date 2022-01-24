@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyAiTutorial : MonoBehaviour
+public class Monster : MonoBehaviour
 {
     public NavMeshAgent agent;
 
@@ -24,7 +24,7 @@ public class EnemyAiTutorial : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("PlayerObj").transform;
+        player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -47,6 +47,11 @@ public class EnemyAiTutorial : MonoBehaviour
         {
             AttackPlayer();
         }
+
+        if (health <= 0)
+        {
+            Destroy(this.gameObject, 0.2f);
+        }
     }
 
     private void Patroling()
@@ -60,7 +65,7 @@ public class EnemyAiTutorial : MonoBehaviour
         {
             agent.SetDestination(walkPoint);
         }
-            
+
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
 
         if (distanceToWalkPoint.magnitude < 1f)
@@ -79,7 +84,7 @@ public class EnemyAiTutorial : MonoBehaviour
         if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
         {
             walkPointSet = true;
-        }        
+        }
     }
 
     private void ChasePlayer()
@@ -90,14 +95,13 @@ public class EnemyAiTutorial : MonoBehaviour
     private void AttackPlayer()
     {
         agent.SetDestination(transform.position);
-
         transform.LookAt(player);
 
         if (!alreadyAttacked)
         {
             Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            rb.AddForce(transform.forward * 10f, ForceMode.Impulse);
+            rb.AddForce(transform.up * 4f, ForceMode.Impulse);
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);

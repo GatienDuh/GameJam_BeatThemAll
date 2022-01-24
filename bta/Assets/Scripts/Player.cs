@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     
     [SerializeField] private float attackRange = 5.0f;
     public Transform attackPoint;
+    public bool isAttacking = false;
+    public LayerMask enemyLayers;
 
     private Vector3 moveDirection = Vector3.zero;
 
@@ -50,6 +52,11 @@ public class Player : MonoBehaviour
             temp.y = 180f;
             transform.rotation = Quaternion.Euler(temp);
         }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Attack();
+        }
     }
 
     private void FixedUpdate()
@@ -59,34 +66,37 @@ public class Player : MonoBehaviour
 
     //#Combat System
 
-    /*void Attack()
+    void Attack()
     {      
         StartCoroutine(AttackAnimation());      
-    }*/
+    }
 
-    /*IEnumerator AttackAnimation()
+    IEnumerator AttackAnimation()
     {
+        Debug.Log("Start Attack Coroutine");
         isAttacking = true;
-        animator.SetTrigger("Attack");
-        rb.constraints = RigidbodyConstraints2D.FreezePosition;
+        //animator.SetTrigger("Attack");
+        //rb.constraints = RigidbodyConstraints2D.FreezePosition;
 
         yield return new WaitForSeconds(0.6f);
         
-        Collider2D[] Enemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        Collider[] Enemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
 
-        foreach (Collider2D enemy in Enemies)
+        foreach (Collider enemy in Enemies)
         {
-                enemy.GetComponent<Animator>().SetTrigger("Hurt");
-                enemy.GetComponent<Enemy>().health -= 1;             
+            //enemy.GetComponent<Animator>().SetTrigger("Hurt");
+            enemy.GetComponent<Monster>().health -= 1;
+            Debug.Log("Attack");
         }
 
-        rb.constraints = RigidbodyConstraints2D.None;
-        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        //rb.constraints = RigidbodyConstraints2D.None;
+        //rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         yield return new WaitForSeconds(0.2f);
 
         isAttacking = false;
-    }*/
+        Debug.Log("End Attack Coroutine");
+    }
 
     //#Gizmos Hitbox
 
